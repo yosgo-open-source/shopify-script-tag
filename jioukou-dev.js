@@ -29,7 +29,6 @@
       /**Create and insert iframe */
       var page = document.createElement("iframe");
       page.setAttribute("src", Group_buy_url + qs(ParamName));
-      page.setAttribute("id", IframeId);
       page.setAttribute("scrolling", "no");
       page.setAttribute(
         "style",
