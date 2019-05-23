@@ -29,7 +29,7 @@
     if (qs(ParamName)) {
       var page = document.createElement("iframe");
       page.setAttribute("style", "width: 100%; border: 0px; height: 100vh;");
-      page.setAttribute("src", Group_buy_url + groupId);
+      page.setAttribute("src", Group_buy_url + qs(ParamName));
       document.getElementById(PageId).appendChild(page);
     } else {
       alert(
