@@ -27,10 +27,9 @@
 
   if (window.location.href.indexOf(PageName) >= 0) {
     if (qs(ParamName)) {
-      var page = document
-        .createElement("iframe")
-        .setAttribute("style", "width: 100%; border: 0px; height: 100vh;")
-        .setAttribute("src", Group_buy_url + groupId);
+      var page = document.createElement("iframe");
+      page.setAttribute("style", "width: 100%; border: 0px; height: 100vh;");
+      page.setAttribute("src", Group_buy_url + groupId);
       document.getElementById(PageId).appendChild(page);
     } else {
       alert(

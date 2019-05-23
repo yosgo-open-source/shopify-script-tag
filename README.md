@@ -1,4 +1,4 @@
-Using [Jsdelivr](https://www.jsdelivr.com/features)
+Using [Jsdelivr](https://www.jsdelivr.com/features). [Article](https://zellwk.com/blog/jsdelivr/)
 
 ### Add following to test store
 
