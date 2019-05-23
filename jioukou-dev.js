@@ -14,6 +14,8 @@
    * 3. Insert Jioukou app into Shopify group buy page
    */
 
+  console.log("[Jioukou ScriptTag loaded]");
+
   function qs(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
