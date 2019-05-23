@@ -26,11 +26,18 @@
 
   if (window.location.href.indexOf(PageName) >= 0) {
     if (qs(ParamName)) {
+      /**Create and insert iframe */
       var page = document.createElement("iframe");
-      page.setAttribute("style", "width: 100%; border: 0px; height: 100vh;");
       page.setAttribute("src", Group_buy_url + qs(ParamName));
+      page.setAttribute("id", IframeId);
+      page.setAttribute("scrolling", "no");
+      page.setAttribute(
+        "style",
+        "width: 100%; border: 0px; overflow: hidden; height: 100vh;"
+      );
       document.body.innerHTML = "";
       document.body.appendChild(page);
+      console.log("[Jioukou Iframe loaded]");
     } else {
       alert(
         "Can't read group ID. Please check webiste url or page is set with right way"
