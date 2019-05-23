@@ -6,7 +6,6 @@
     "https://shopify-app-development.yosgo.com" + "/clients?groupId=";
   var ParamName = "groupId";
   var PageName = "group-buy";
-  var PageId = "PageContainer";
 
   /**
    * 1. Read window url. Check url is Shopify group buy page or not
@@ -30,7 +29,8 @@
       var page = document.createElement("iframe");
       page.setAttribute("style", "width: 100%; border: 0px; height: 100vh;");
       page.setAttribute("src", Group_buy_url + qs(ParamName));
-      document.getElementById(PageId).appendChild(page);
+      document.body.innerHTML = "";
+      document.body.appendChild(page);
     } else {
       alert(
         "Can't read group ID. Please check webiste url or page is set with right way"
