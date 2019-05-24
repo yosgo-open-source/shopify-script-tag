@@ -32,7 +32,7 @@
       page.setAttribute("scrolling", "no");
       page.setAttribute(
         "style",
-        "width: 100%; border: 0px; overflow: hidden; height: 100vh;"
+        "width: 100%; border: 0px; min-height: 100vh;"
       );
       document.body.innerHTML = "";
       document.body.appendChild(page);
