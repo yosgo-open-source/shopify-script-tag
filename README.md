@@ -2,12 +2,12 @@ Using [Jsdelivr](https://www.jsdelivr.com/features). [Article](https://zellwk.co
 
 # Add following to test store
 
-### Dev
+### Development
 
 - Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag@0.0.1/jioukou-dev.js
 - Store website example: https://yosgo-store.myshopify.com/pages/group-buy?groupId=8HHrxzPCB
 
-### Pro
+### Production
 
 - Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag@0.0.1/jioukou.js
 
@@ -60,3 +60,7 @@ mutation {
   }
 }
 ```
+
+# Purge cache
+
+https://github.com/jsdelivr/jsdelivr#purge-cache
