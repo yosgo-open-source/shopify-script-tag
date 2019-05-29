@@ -3,17 +3,11 @@
    * Config
    */
   var Group_buy_url =
-    "https://shopify-app-development.yosgo.com" + "/clients?groupId=";
-  var ParamName = "groupId";
+    "https://shopify-app-development.yosgo.com" + "/group-buy?groupId=";
+  var Param_groupId = "groupId"; /**網址上，用於的揪團 ID */
+  var Param_tagType = "tagType"; /**網址上，用於承裝 Ifrmae 容器的類別 */
+  var Param_tagName = "tagName"; /**網址上ㄝ用於承裝 Ifame 容器的名稱 */
   var PageName = "group-buy";
-
-  /**
-   * 1. Read window url. Check url is Shopify group buy page or not
-   * 2. Parse group buy page to get groupId from Shopify store webiste
-   * 3. Insert Jioukou app into Shopify group buy page
-   */
-
-  console.log("[Jioukou ScriptTag loaded]");
 
   function qs(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -25,18 +19,25 @@
   }
 
   if (window.location.href.indexOf(PageName) >= 0) {
-    if (qs(ParamName)) {
-      /**Create and insert iframe */
+    /**僅在 group-buy 的 page 內作用 */
+    if (qs(Param_groupId)) {
+      /**確認 groupId 是否存在 */
       var page = document.createElement("iframe");
-      page.setAttribute("src", Group_buy_url + qs(ParamName));
+      page.setAttribute("src", Group_buy_url + qs(Param_groupId));
       page.setAttribute("scrolling", "no");
       page.setAttribute(
         "style",
         "width: 100%; border: 0px; min-height: 100vh;"
       );
-      document.body.innerHTML = "";
-      document.body.appendChild(page);
-      console.log("[Jioukou Iframe loaded]");
+      if (qs(Param_tagName) && qs(Param_tagType)) {
+        /**Iframe 放在某元件中 */
+        console.log("[Jioukou Iframe loaded in certain element]");
+      } else {
+        /**Iframe 放在 Body 內 */
+        document.body.innerHTML = "";
+        document.body.appendChild(page);
+        console.log("[Jioukou Iframe loaded in body]");
+      }
     } else {
       alert(
         "Can't read group ID. Please check webiste url or page is set with right way"

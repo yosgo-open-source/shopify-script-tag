@@ -1,15 +1,23 @@
 Using [Jsdelivr](https://www.jsdelivr.com/features). [Article](https://zellwk.com/blog/jsdelivr/)
 
-### Add following to test store
+# Add following to test store
+
+### Dev
 
 - Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag@0.0.1/jioukou-dev.js
 - Store website example: https://yosgo-store.myshopify.com/pages/group-buy?groupId=8HHrxzPCB
 
-### Add following to production store
+### Pro
 
 - Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag@0.0.1/jioukou.js
 
-### Add, Update gql
+# Operate to Shopify store
+
+Using Page API to create new page for Jioukou iframe. And add ScriptTag for store page can load script to render iframe.
+
+### Page
+
+### ScriptTag (GraphQL Admin API)
 
 ```
 query {
