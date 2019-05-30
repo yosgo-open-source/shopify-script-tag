@@ -17,10 +17,11 @@
       : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
+  /**僅在 group-buy 的 page 內作用 */
   if (window.location.href.indexOf(PageName) >= 0) {
-    /**僅在 group-buy 的 page 內作用 */
+    /**確認 groupId 是否存在 */
     if (qs(Param_groupId)) {
-      /**確認 groupId 是否存在 */
+      /**建立 iframe 元件 */
       var page = document.createElement("iframe");
       page.setAttribute("src", Group_buy_url + qs(Param_groupId));
       page.setAttribute("scrolling", "no");
@@ -28,19 +29,34 @@
         "style",
         "width: 100%; border: 0px; min-height: 100vh;"
       );
-      if (qs(Param_tagName) && qs(Param_tagType)) {
-        /**Iframe 放在某元件中 */
-        console.log("[Jioukou Iframe loaded in certain element]");
+      /**決定 Iframe 位置 */
+      if (
+        qs(Param_tagName) &&
+        qs(Param_tagType) &&
+        qs(Param_tagName) !== "" &&
+        qs(Param_tagType) !== ""
+      ) {
+        if (qs(Param_tagType) === "class") {
+          /**Iframe 於 class 的元件中*/
+          var ele = document.getElementsByClassName(qs(Param_tagName));
+          ele.innerHTML = "";
+          ele.appendChild(page);
+          console.log("[Jioukou Iframe loaded in class element]");
+        } else if (qs(Param_tagType) === "id") {
+          /**Iframe 於 id 的元件中*/
+          var ele = document.getElementById(qs(Param_tagName));
+          ele.innerHTML = "";
+          ele.appendChild();
+          console.log("[Jioukou Iframe loaded in id element]");
+        }
       } else {
-        /**Iframe 放在 Body 內 */
+        /**Iframe 於 body  */
         document.body.innerHTML = "";
         document.body.appendChild(page);
         console.log("[Jioukou Iframe loaded in body]");
       }
     } else {
-      alert(
-        "Can't read group ID. Please check webiste url or page is set with right way"
-      );
+      alert("GroupId is missing. It might wrong with url");
     }
   }
 })();
