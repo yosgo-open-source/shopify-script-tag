@@ -72,7 +72,7 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{
     "path": [
-        "PATH"
+        "PATH_WITH_/_LEAD"
       ]
   }'
 ```

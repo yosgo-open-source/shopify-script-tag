@@ -2,7 +2,7 @@
 (function() {
   /** Config */
   var Group_buy_url =
-    "https://shopify-app-development.yosgo.com" + "/group-buy?groupId=";
+    "https://shopify-app-production.yosgo.com" + "/group-buy?groupId=";
   var Param_groupId = "groupId"; /**網址上，用於的揪團 ID */
   var Param_tagType = "tagType"; /**網址上，用於承裝 Ifrmae 容器的類別 */
   var Param_tagName = "tagName"; /**網址上ㄝ用於承裝 Ifame 容器的名稱 */
