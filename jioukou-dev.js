@@ -24,7 +24,6 @@
       /**建立 iframe 元件 */
       var page = document.createElement("iframe");
       page.setAttribute("src", Group_buy_url + qs(Param_groupId));
-      page.setAttribute("scrolling", "no");
       page.setAttribute(
         "style",
         "width: 100%; border: 0px; min-height: 100vh;"
