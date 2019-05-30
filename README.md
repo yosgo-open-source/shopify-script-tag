@@ -4,11 +4,11 @@ Using [Jsdelivr](https://www.jsdelivr.com/features). [Article](https://zellwk.co
 
 ### Development
 
-- Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag/jioukou-dev.js
+- Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag@1.0.0/jioukou-dev.js
 
 ### Production
 
-- Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag/jioukou-prod.js
+- Jsdelivr: https://cdn.jsdelivr.net/gh/yosgo-open-source/shopify-script-tag@1.0.0/jioukou-prod.js
 
 # Operate to Shopify store
 
