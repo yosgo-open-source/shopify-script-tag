@@ -1,7 +1,6 @@
+/** v0.0.1 */
 (function() {
-  /**
-   * Config
-   */
+  /** Config */
   var Group_buy_url =
     "https://shopify-app-development.yosgo.com" + "/group-buy?groupId=";
   var Param_groupId = "groupId"; /**網址上，用於的揪團 ID */
