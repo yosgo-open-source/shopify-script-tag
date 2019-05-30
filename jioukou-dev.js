@@ -1,4 +1,4 @@
-/** v0.0.1 */
+/** v1.0.0 */
 (function() {
   /** Config */
   var Group_buy_url =
