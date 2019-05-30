@@ -64,3 +64,15 @@ mutation {
 # Purge cache
 
 https://github.com/jsdelivr/jsdelivr#purge-cache
+
+```
+curl -X POST \
+  PURGE_URL/ \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+    "path": [
+        "PATH"
+      ]
+  }'
+```
