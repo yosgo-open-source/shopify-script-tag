@@ -41,19 +41,19 @@
           var ele = document.getElementsByClassName(qs(Param_tagName));
           ele.innerHTML = "";
           ele.appendChild(page);
-          console.log("[Jioukou Iframe loaded in class element]");
+          console.log("[Jioukou loaded in class element]");
         } else if (qs(Param_tagType) === "id") {
           /**Iframe 於 id 的元件中*/
           var ele = document.getElementById(qs(Param_tagName));
           ele.innerHTML = "";
           ele.appendChild();
-          console.log("[Jioukou Iframe loaded in id element]");
+          console.log("[Jioukou loaded in id element]");
         }
       } else {
         /**Iframe 於 body  */
         document.body.innerHTML = "";
         document.body.appendChild(page);
-        console.log("[Jioukou Iframe loaded in body]");
+        console.log("[Jioukou loaded in body]");
       }
     } else {
       alert("GroupId is missing. It might wrong with url");
