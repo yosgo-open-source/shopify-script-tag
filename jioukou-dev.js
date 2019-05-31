@@ -56,12 +56,12 @@
             document.body.appendChild(page);
             console.log("[Jioukou loaded in body]");
           } else {
-            if (tag_type === "id") {
+            if (tag_type === "class") {
               var element = document.body.getElementsByClassName(tag_name)[0];
               element.innerHTML = "";
               element.appendChild(page);
               console.log("[Jioukou loaded in class]");
-            } else if (tag_type === "class") {
+            } else if (tag_type === "id") {
               var element = document.body.getElementById(tag_name);
               element.innerHTML = "";
               element.appendChild(page);
