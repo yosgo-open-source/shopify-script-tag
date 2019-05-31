@@ -62,7 +62,7 @@
               element.appendChild(page);
               console.log("[Jioukou loaded in class]");
             } else if (tag_type === "id") {
-              var element = document.body.getElementById(tag_name);
+              var element = document.getElementById(tag_name);
               element.innerHTML = "";
               element.appendChild(page);
               console.log("[Jioukou loaded in id]");
