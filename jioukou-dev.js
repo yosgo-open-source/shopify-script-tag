@@ -58,16 +58,27 @@
           } else {
             if (tag_type === "class") {
               var element = document.getElementsByClassName(tag_name)[0];
-              element.innerHTML = "";
-              element.appendChild(page);
-              console.log("[Jioukou loaded in class]");
+              if (element) {
+                element.innerHTML = "";
+                element.appendChild(page);
+                console.log("[Jioukou loaded in class]");
+              } else {
+                console.log("Class element doesn't exist");
+              }
             } else if (tag_type === "id") {
               var element = document.getElementById(tag_name);
-              element.innerHTML = "";
-              element.appendChild(page);
-              console.log("[Jioukou loaded in id]");
+              if (element) {
+                element.innerHTML = "";
+                element.appendChild(page);
+                console.log("[Jioukou loaded in id]");
+              } else {
+                console.log("Id element doesn't exist");
+              }
             }
           }
+        })
+        .catch(function(err) {
+          console.log("Can't get Shop setting");
         });
     } else {
       alert("GroupId is missing. It might wrong with url");

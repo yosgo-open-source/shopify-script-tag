@@ -64,6 +64,8 @@ mutation {
 
 https://github.com/jsdelivr/jsdelivr#purge-cache
 
+For multiple file
+
 ```
 curl -X POST \
   PURGE_URL/ \
