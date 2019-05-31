@@ -57,7 +57,7 @@
             console.log("[Jioukou loaded in body]");
           } else {
             if (tag_type === "class") {
-              var element = document.body.getElementsByClassName(tag_name)[0];
+              var element = document.getElementsByClassName(tag_name)[0];
               element.innerHTML = "";
               element.appendChild(page);
               console.log("[Jioukou loaded in class]");
